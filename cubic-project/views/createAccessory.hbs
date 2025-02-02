@@ -1,0 +1,23 @@
+<main>
+    <h1>Create Accessory</h1>
+    <div class="form">
+        <form action='/accessories/create' method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            {{#if nameMessage}}
+            <p>{{nameMessage}}</p>
+            {{/if}}
+            <label for="name">Description</label>
+            <textarea id="name" name="description"></textarea>
+            {{#if descriptionMessage}}
+            <p>{{descriptionMessage}}</p>
+            {{/if}}
+            <label for="image">ImageUrl</label>
+            <input type="text" id="image" name="imageUrl">
+            {{#if imageMessage}}
+            <p>{{imageMessage}}</p>
+            {{/if}}
+            <input type="submit" value="Create">
+        </form>
+    </div>
+</main>

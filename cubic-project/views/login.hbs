@@ -1,0 +1,18 @@
+<main>
+  <h1>Login Form</h1>
+  {{#if user}}
+  <h2>Hello {{user}}! You have successully regitered and can now log in.</h2>
+  {{/if}}
+  <div class="form">
+    <form action='/auth/login' method="POST">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password">
+      {{#if error}}
+      <span class="error">{{error}}</span>
+      {{/if}}
+      <input type="submit" value="Login">
+    </form>
+  </div>
+</main>

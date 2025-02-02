@@ -1,0 +1,27 @@
+<main>
+  <h1>Edit Cube</h1>
+  <div class="form">
+    <form method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" value="{{x.name}}">
+      <label for="name">Description</label>
+      <textarea id="name" name="description">{{x.description}}</textarea>
+      <label for="image">ImageUrl</label>
+      <input type="text" id="image" name="imageUrl" value="{{x.imageUrl}}">
+      <label for="difficulty">Difficulty</label>
+      <select id="difficulty" name="difficultyLevel">
+        <option id="1" value="1">1 - Very Easy</option>
+        <option id="2" value="2">2 - Easy</option>
+        <option id="3" value="3">3 - Medium (Standard 3x3)</option>
+        <option id="4" value="4">4 - Intermediate</option>
+        <option id="5" value="5">5 - Expert</option>
+        <option id="6" value="6">6 - Hardcore</option>
+      </select>
+      <input type="submit" value="Edit">
+    </form>
+  </div>
+</main>
+<script>
+  {{!-- document.getElementById({{x.difficultyLevel}}).setAttribute('selected','true'); --}}
+  document.querySelector(`option[value='{{x.difficultyLevel}}']`).setAttribute('selected','true');
+</script>
