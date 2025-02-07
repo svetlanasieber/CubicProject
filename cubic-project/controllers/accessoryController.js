@@ -12,4 +12,4 @@ router.post('/create', validator, (req, res) => {
     res.redirect('/cubes');
 });
 
-export default router;
+export default router;  
