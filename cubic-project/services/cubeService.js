@@ -18,7 +18,7 @@ function getOneWithAccessories(id) {
 
 function create(userId, data) {
     const cube = new Cube({ creator: userId, ...data });
-    return cube.save();
+    return cube.save();   
 }
 
 async function attachAccessory(cubeId, accessoryId) {
@@ -29,7 +29,7 @@ async function attachAccessory(cubeId, accessoryId) {
     accessory.cubes.push(cube);
     const resultCube = cube.save();
     const resultAccessory = accessory.save();
-    
+     
     return Promise.all([resultCube, resultAccessory]);
 }
 
