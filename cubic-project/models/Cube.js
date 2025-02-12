@@ -11,7 +11,6 @@ const cubeScheme = new mongoose.Schema({
 
 cubeScheme.methods.getInfo = function () { return `My name is ${this.name}` };
 cubeScheme.virtual('presentation').get(function () { return `${this.name}: ${this.description}` });
-// cubeScheme.path('imageUrl')
-//     .validate(function () { return this.imageUrl.startsWith('http') }, 'ImageUrl should start with http or https!');
+
 
 export default mongoose.model('Cube', cubeScheme);
