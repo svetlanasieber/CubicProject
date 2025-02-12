@@ -27,3 +27,4 @@ export const validateAccessoryFormInputs = (req, res, next) => {
     }
     next();
 };
+
